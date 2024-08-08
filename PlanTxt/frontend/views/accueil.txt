@@ -1,0 +1,6 @@
+importer @/components/accueil/searchBar.txt
+importer @/components/accueil/destinationAccueil.txt
+
+<searchBar>
+<DestinationAccueil>
+<RecentSearch>

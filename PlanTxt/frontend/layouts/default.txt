@@ -1,0 +1,5 @@
+importer @/components/header.txt
+importer @/components/footer.txt
+
+<header :titre>
+<footer>
