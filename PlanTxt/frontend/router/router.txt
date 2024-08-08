@@ -1,0 +1,9 @@
+variables route ← liste [
+			{path =’/’
+			 component ← importer @/layouts/default/Default.js
+			 enfant ← liste [
+				{ path =’’
+				  name =’’
+				  component <-
+			 ]
+]

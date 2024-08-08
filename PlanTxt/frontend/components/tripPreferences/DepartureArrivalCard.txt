@@ -1,0 +1,21 @@
+importer setTime.txt
+importer setDate.txt
+importer @/frontend/components/NextButton.txt
+importer @/frontend/components/StageNumber.txt
+
+<StageNumber :number=3>
+
+<div class: departure>
+<setTime.txt>
+<setDate.txt>
+<div>
+
+<div class: arrival>
+<setTime.txt>
+<setDate.txt>
+<div>
+
+<Nextbutton toggleHideNextPage() >
+
+
+
