@@ -27,7 +27,7 @@ export function SetDestination() {
                 </div>
             </div>
             <div style={{textAlign:'center', alignItems: 'center', paddingTop: '10px'}}>
-                <List items={departureArrival} pointStyle="yes" />
+                <List items={departureArrival} pointStyle="none" />
             </div>
 
 
