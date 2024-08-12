@@ -1,20 +1,21 @@
-import {List} from "../components/List";
+import React from 'react';
+
+import List from "../components/List";
+import {SearchBar} from "../components/SearchBar"; // Assurez-vous que SearchBar est correctement importé
 
 export function SetDestination() {
     const departureArrival = [
         {
-            id: '0',
             text: 'From...',
             icon: './assets/broche-de-localisation.png',
-            position: 'right'
+            position: 'left'
         },
         {
-            id: '1',
-            text: 'Where to ? ',
+            text: 'Where to ?',
             icon: './assets/broche-de-localisation.png',
             position: 'right'
         }
-    ]
+    ];
 
     return (
         <>
@@ -26,12 +27,9 @@ export function SetDestination() {
                     <p>Set Destination</p>
                 </div>
             </div>
-            <div style={{textAlign:'center', alignItems: 'center', paddingTop: '10px'}}>
-                <List items={departureArrival} pointStyle="none" />
+            <div style={{textAlign: 'center', alignItems: 'center', paddingTop: '10px'}}>
+                <List component={SearchBar} propsList={departureArrival} stylepoint={false} />
             </div>
-
-
-
         </>
-    )
+    );
 }

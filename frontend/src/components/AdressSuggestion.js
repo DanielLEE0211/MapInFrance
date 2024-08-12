@@ -1,7 +1,7 @@
 export function AdressSuggestion({name, number, town, region, country, postalCode, icon}) {
     return (
         <div style={{display: 'flex', boxShadow: '0px 4px 10px black'}}>
-            <img src={icon} alt='mauvaise path' style={{width: '40px', height: '40px', marginRight:'10px'}}/>
+            <img src={icon} alt='mauvaise path' style={{width: '40px', height: '40px',marginLeft:'10px', marginRight:'10px', marginTop: '5px'}}/>
             <div>
                 <div>
                     <b>{name}</b>

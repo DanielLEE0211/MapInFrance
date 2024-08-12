@@ -1,19 +1,19 @@
 import {SearchBar} from "./SearchBar";
 
 
-export function List({items, pointStyle}) {
-    let listItems
+import React from 'react';
 
-    if (pointStyle === 'none') {
-        listItems = items.map(item =>
-            <li style={{listStyleType: 'none'}} key={item.id}> <SearchBar position={item.position} text={item.text} icon={item.icon}/></li>
-        );
-    } else {
-        listItems = items.map(item =>
-            <li key={item.id}> <SearchBar position={item.position} text={item.text} icon={item.icon}/></li>
-        );
-    }
+// Composant List
+const List = ({ component: Component, stylepoint = true, propsList }) => {
+    return (
+        <ul style={{ listStyleType: stylepoint ? 'disc' : 'none' }}>
+            {propsList.map((props, index) => (
+                <li key={index}>
+                    <Component {...props} />
+                </li>
+            ))}
+        </ul>
+    );
+};
 
-    return <ul>{listItems}</ul>
-
-}
+export default List;
