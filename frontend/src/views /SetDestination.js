@@ -14,7 +14,8 @@ export function SetDestination() {
             text: 'Where to ?',
             icon: './assets/broche-de-localisation.png',
             position: 'right'
-        }
+        },
+
     ];
 
     return (

@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
+import {Popup1} from "./Popup1";
+import {Popup2} from "./Popup2";
 
-export function ButtonSet({ name }) {
+export function ButtonPopup({ name, component: Component, propsList }) {
     const [isOpen, setIsOpen] = useState(false);
     const [isHovered, setIsHovered] = useState(false);
     const [isActive, setIsActive] = useState(false);
@@ -52,14 +54,14 @@ export function ButtonSet({ name }) {
 
             {/* Affichage conditionnel de la popup */}
             {isOpen && (
-                <div style={{ ...styles.popup, width: popupWidth }}>
-                    <p>This is a simple popup.</p>
-                    <button onClick={togglePopup}>Close</button>
-                </div>
+                <>
+                    <Component {...propsList} togglePopup={togglePopup}/>
+                </>
+
             )}
         </div>
     );
-};
+}
 
 // Styles en ligne
 const styles = {
@@ -80,8 +82,6 @@ const styles = {
         left: 0,
         backgroundColor: '#fff',
         padding: '10px',
-        borderRadius: '4px',
-        boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
         marginTop: '5px',
         zIndex: 1000,
     },
